@@ -220,6 +220,9 @@ chapter 1-1. 블루 프린트 기초.
 			> [ _SimpleBP_2 ]
 			> [ Maps ] 생성 후.
 			[ ThirdPersonExampleMap ] 복제.
+			-	이름..
+				-	"Map_HelloBlueprint"
+				
 
 		3]	[ 콘텐츠 창 ]
 			> [ _SimpleBP_2 ]
