@@ -1,6 +1,6 @@
 ﻿======================================================
 6. 트리거..
-	참고	:	[ _Jackie / _Map / 1_Jackie_BA_Light_Mine ]
+	참고	:	[ _Jackie / _Map / BP_Sample ]
 ======================================================
 
 	------------
@@ -65,16 +65,15 @@
 					플레이어가 접근하면 켜지고
 					멀어지면 꺼지는 전등 만들기..
 
-
 			
-			-	1)	[ 콘텐츠 ]
-					> [ StarterContent ]
-					> [ Props ]에서
-					조각( SM_Statue )을
-					씬의 적당한 곳에 배치..
+			1)	[ 콘텐츠 ]
+				> [ StarterContent ]
+				> [ Props ]에서
+				조각( SM_Statue )을
+				씬의 적당한 곳에 배치..
 			
-			-	2)	[ 모드 / 라이트 ]에서
-					[ 포인트 라이트 ]를 찾아 배치..
+			2)	[ 모드 / 라이트 ]에서
+				[ 포인트 라이트 ]를 찾아 배치..
 
 				-	[ 디테일 ]
 					> [ Rendering ]
@@ -85,64 +84,61 @@
 						-	[ 디테일 ]
 							> [ Light ]
 							> [ Intensity ]..
+					-	조명 범위..
+						-	[ 디테일 ]
+							> [ Light ]
+							> [ Attenuation Radius ]..
 
 			
-			-	3)	[ 모드 ]
-					> [ 기본 ]
-					> [ 트리거 박스 ]를
-					[ 조각 ]에 세팅..
+			3)	[ 모드 ]
+				> [ 기본 ]
+				> [ 트리거 박스 ]를
+				[ 조각 ]에 세팅..
 
---					적당한 크기로 조절..
+				-	적당한 크기로 조절..
 					-	[ 디테일 ]
 						> [ Shape ]
 						> [ Box Extent ]
 						-	디테일한 크기 설정 가능..
 
 			
-			-	4)	3)에서 생성한
-					[ 트리거 박스 ]를
-					[ 월드 아웃라이너 ]에서 선택하고
-					마우스 우클릭..
-					-	[ 팝업메뉴 ]
-						> [ 레벨 BP 이벤트 / 이벤트 추가 ] 선택..
-						> [ OnActorBeginOverlap / OnActorEndOverlap ]을 추가..
-						
-						5.2)
-
-							1)	[ 박스 트리거 ]를
-								[ 월드 아웃라이너 ]에서 선택
-							2)	[ 레벨 BP ]
-								> [ 마우스 우클릭 ]
-								> [ 팝업 ]
-								> [ Trigger Box에 대한 이벤트 추가 ]
-								> [ 콜리전 ]
-								> [ OnActorBeginOverlap / OnActorEndOverlap ]을 추가..
+			4)	3)에서 생성한				
+				[ 박스 트리거 ]를
+				[ 월드 아웃라이너 ]에서 선택..
+					
+			5)	[ 레벨 BP ]
+				> [ 마우스 우클릭 ]
+				> [ 팝업 ]
+				> [ Trigger Box에 대한 이벤트 추가 ]
+				> [ 콜리전 ]
+				> [ OnActorBeginOverlap
+					/ OnActorEndOverlap ]을 추가..
 
 			
-			-	5)	[ 월드 아웃라이너 ]
-					> [ 포인트 라이트 ]
+			6)	[ 월드 아웃라이너 ]
+				> [ 포인트 라이트 ]
 
-					드래그 to
+				드래그 to
 
-					[ 레벨 BP창 ]..
-						-	[ PointLight ] 
-							> [ Get 노드 ] 생성..
-
-
-			-	6)	[ 포인트 라이트 핀 ]을 드래그 하면
-					관련된 액션이 나옴..
-					-	[ Set Visibility 노드 ]를 2개 생성..
+				[ 레벨 BP창 ]..
+				-	[ PointLight ] 
+					> [ Get 노드 ] 생성..
 
 
-			-	7)	각각 다음과 같이 설정한 뒤 테스트..
+			6)	[ 포인트 라이트 핀 ]을 드래그 하면
+				관련된 액션이 나옴..
+				-	[ Set Visibility 노드 ]를 2개 생성..
 
-					[ OnActorBeginOverlap ]
-					--->	[ Set Visibility 노드 ]
-							> [ New Visibility ] : true
 
-					[ OnActorBeginOverlap ]
-					--->	[ Set Visibility 노드 ]
-							> [ New Visibility ] : false						
+			8)	각각 다음과 같이 설정한 뒤 테스트..
+
+				[ OnActorBeginOverlap ]
+				--->	[ Set Visibility 노드 ]
+						> [ New Visibility ] : true
+
+				[ OnActorBeginOverlap ]
+				--->	[ Set Visibility 노드 ]
+						> [ New Visibility ] : false						
 
 
 ======================================================
